@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+    commands:
+      - echo "Installing dependencies"
+      - pip install -r flask-docker-app/requirements.txt
+
+  build:
+    commands:
+      - echo "Running basic build validation"
+      - python -m py_compile flask-docker-app/app.py
+
+artifacts:
+  files:
+    - '**/*'
+
