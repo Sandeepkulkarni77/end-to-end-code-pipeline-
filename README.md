@@ -7,22 +7,19 @@ The goal of this project is to eliminate manual deployments by enabling a fully 
 ---
 
 ##  Architecture Overview
-GitHub
-│
-▼
-AWS CodePipeline
-│
-▼
-AWS CodeBuild → Build Docker Image
-│
-▼
-Amazon ECR → Store Container Image
-│
-▼
-AWS ECS Fargate → Run Application
-│
-▼
-Application Load Balancer → Expose App to Internet
+
+GitHub  
+   ↓  
+AWS CodePipeline  
+   ↓  
+AWS CodeBuild → Builds Docker image  
+   ↓  
+Amazon ECR → Stores the container image  
+   ↓  
+AWS ECS Fargate → Runs the application  
+   ↓  
+Application Load Balancer (ALB) → Exposes the app to the internet  
+
 
 
 ---
